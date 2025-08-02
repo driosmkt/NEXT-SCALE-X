@@ -1,3 +1,7 @@
+### **`style.css` (Atualizado)**
+Foram adicionadas as novas classes para a lista de sequência e removidas as classes antigas que não são mais utilizadas.
+
+```css
 /* RESET E CONFIGURAÇÕES GLOBAIS */
 * {
     margin: 0;
@@ -11,8 +15,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #0A0018; /* Cor de fundo principal */
-    color: #CFCBBF; /* Cor de texto principal */
+    background-color: #0A0018;
+    color: #CFCBBF;
     line-height: 1.6;
 }
 
@@ -57,8 +61,8 @@ body {
 }
 
 .cta-button {
-    background-color: #F1C12E; /* Cor de destaque */
-    color: #0A0018; /* Cor de fundo para contraste */
+    background-color: #F1C12E;
+    color: #0A0018;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
@@ -80,7 +84,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: #F1C12E; /* Cor de destaque */
+    color: #F1C12E;
 }
 
 .profile-grid {
@@ -90,7 +94,7 @@ body {
 }
 
 .profile-card {
-    background-color: #1C102E; /* Fundo dos cards */
+    background-color: #1C102E;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -128,7 +132,7 @@ body {
 }
 
 .profile-card.tier-2 .score {
-    background-color: #c0c0c0; /* Prata */
+    background-color: #c0c0c0;
     color: #0A0018;
 }
 
@@ -168,20 +172,15 @@ body {
 }
 
 .tier-2-bg {
-    background-color: #100322; /* Fundo sutilmente diferente para Tier 2 */
-}
-
-/* NOVOS ESTILOS PARA CARDS TIER 3 E 4 */
-.profile-card.tier-3, .profile-card.tier-4 {
-    padding-left: 25px; /* Ajusta o padding para a borda */
+    background-color: #100322;
 }
 
 .profile-card.tier-3 {
-    border-left: 5px solid #F1C12E; /* Borda dourada */
+    border-left: 5px solid #F1C12E;
 }
 
 .profile-card.tier-4 {
-    border-left: 5px solid #6c757d; /* Borda cinza */
+    border-left: 5px solid #6c757d;
 }
 
 .profile-card.tier-4 .score {
@@ -255,34 +254,48 @@ body {
     to { /* a largura é definida inline no HTML */ }
 }
 
-/* SEÇÃO FINAL */
-.final-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: start;
+/* NOVA SEÇÃO DE SEQUÊNCIA DE ABORDAGEM */
+.sequence-bg {
+    background-color: #100322;
 }
 
-.sequence-list ol, .excluded-list ul {
-    list-style-position: inside;
-    padding-left: 0;
+.sequence-list-container {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.sequence-list li, .excluded-list li {
-    background: #1C102E;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
+.sequence-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: sequence-counter;
 }
 
-.excluded-list a {
-    color: #F1C12E;
-    text-decoration: none;
-    font-weight: 600;
+.sequence-list li {
+    background-color: #1C102E;
+    border-radius: 8px;
+    padding: 15px 20px 15px 60px;
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
-.excluded-list a:hover {
-    text-decoration: underline;
+.sequence-list li::before {
+    counter-increment: sequence-counter;
+    content: counter(sequence-counter);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #F1C12E;
+    color: #0A0018;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
 }
 
 /* RODAPÉ */
@@ -297,7 +310,7 @@ footer {
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
     #hero h1 { font-size: 2.5rem; }
-    .recommendations-grid, .final-grid { grid-template-columns: 1fr; }
+    .recommendations-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
