@@ -11,8 +11,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #0A0018; /* Cor de fundo principal */
+    color: #CFCBBF; /* Cor de texto principal */
     line-height: 1.6;
 }
 
@@ -24,7 +24,7 @@ body {
 
 /* CABEÇALHO (HERO SECTION) */
 #hero {
-    background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1557683316-973673baf926') no-repeat center center/cover;
+    background: linear-gradient(rgba(10, 0, 24, 0.8), rgba(10, 0, 24, 0.8)), url('https://images.unsplash.com/photo-1557683316-973673baf926') no-repeat center center/cover;
     color: #fff;
     padding: 100px 0;
     text-align: center;
@@ -34,6 +34,7 @@ body {
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 700;
+    color: #FFFFFF; /* Garante que o título principal seja branco */
 }
 
 #hero .subtitle {
@@ -56,8 +57,8 @@ body {
 }
 
 .cta-button {
-    background-color: #ffd700; /* Dourado */
-    color: #0a192f;
+    background-color: #F1C12E; /* Cor de destaque */
+    color: #0A0018; /* Cor de fundo para contraste */
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
@@ -66,7 +67,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #ffc400;
+    background-color: #ffda57; /* Variação do destaque */
     transform: translateY(-3px);
 }
 
@@ -79,7 +80,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: #0a192f; /* Azul escuro */
+    color: #F1C12E; /* Cor de destaque */
 }
 
 .profile-grid {
@@ -89,10 +90,10 @@ body {
 }
 
 .profile-card {
-    background-color: #fff;
+    background-color: #1C102E; /* Fundo dos cards */
     border-radius: 10px;
     padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -100,26 +101,26 @@ body {
 
 .profile-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 25px rgba(241, 193, 46, 0.15); /* Sombra com cor de destaque */
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #3c2f5a; /* Linha divisória mais escura */
     padding-bottom: 15px;
     margin-bottom: 15px;
 }
 
 .card-header h3 {
-    color: #0a192f;
+    color: #FFFFFF; /* Títulos dos cards */
     font-size: 1.4rem;
 }
 
 .score {
-    background-color: #ffd700;
-    color: #0a192f;
+    background-color: #F1C12E; /* Cor de destaque */
+    color: #0A0018; /* Cor de fundo para contraste */
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: 700;
@@ -127,11 +128,12 @@ body {
 
 .profile-card.tier-2 .score {
     background-color: #c0c0c0; /* Prata */
+    color: #0A0018;
 }
 
 .ideal-profile {
     font-weight: 600;
-    color: #1a73e8;
+    color: #F1C12E; /* Cor de destaque */
     margin-bottom: 15px;
     text-align: center;
 }
@@ -151,20 +153,21 @@ body {
     display: inline-block;
     margin-top: auto;
     padding: 10px 20px;
-    background-color: #0a192f;
-    color: #fff;
+    background-color: #F1C12E; /* Cor de destaque */
+    color: #0A0018; /* Cor de fundo para contraste */
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: 600;
     transition: background-color 0.3s;
 }
 
 .profile-link:hover {
-    background-color: #173a5e;
+    background-color: #ffda57;
 }
 
 .tier-2-bg {
-    background-color: #e9ecef;
+    background-color: #100322; /* Fundo sutilmente diferente para Tier 2 */
 }
 
 /* TIERS 3 e 4 (Compact Grid) */
@@ -175,18 +178,18 @@ body {
 }
 
 .compact-card {
-    background: #fff;
+    background: #1C102E;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
-    border-left: 5px solid #1a73e8; /* Azul */
+    border-left: 5px solid #F1C12E; /* Cor de destaque */
 }
 
 .compact-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(241, 193, 46, 0.1);
 }
 
 .compact-card.tier-4 {
@@ -195,17 +198,17 @@ body {
 
 .compact-card h4 {
     margin-bottom: 10px;
-    color: #0a192f;
+    color: #FFFFFF;
 }
 
 /* RECOMENDAÇÕES E ROI */
 .recommendations-bg {
-    background-color: #0a192f;
-    color: #fff;
+    background-color: #100322; /* Fundo sutilmente diferente */
+    color: #CFCBBF;
 }
 
 .recommendations-bg h2, .recommendations-bg h4 {
-    color: #fff;
+    color: #F1C12E;
 }
 
 .recommendations-grid {
@@ -216,9 +219,10 @@ body {
 }
 
 .recommendation-card {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(241, 193, 46, 0.05);
     padding: 25px;
     border-radius: 8px;
+    border: 1px solid rgba(241, 193, 46, 0.2);
 }
 
 .recommendation-card ul {
@@ -246,7 +250,7 @@ body {
 }
 
 .roi-bar .bar {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(207, 203, 191, 0.2);
     border-radius: 5px;
     padding: 10px;
     position: relative;
@@ -254,7 +258,7 @@ body {
 }
 
 .roi-bar .roi-value {
-    color: #ffd700;
+    color: #F1C12E; /* Cor de destaque */
     font-weight: 700;
 }
 
@@ -277,14 +281,14 @@ body {
 }
 
 .sequence-list li, .excluded-list li {
-    background: #e9ecef;
+    background: #1C102E; /* Fundo dos cards */
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
 .excluded-list a {
-    color: #1a73e8;
+    color: #F1C12E; /* Cor de destaque */
     text-decoration: none;
     font-weight: 600;
 }
@@ -295,8 +299,8 @@ body {
 
 /* RODAPÉ */
 footer {
-    background-color: #0a192f;
-    color: #fff;
+    background-color: #100322; /* Cor de fundo escura e alinhada */
+    color: #CFCBBF;
     text-align: center;
     padding: 20px 0;
     margin-top: 50px;
@@ -312,17 +316,18 @@ footer {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(10, 0, 24, 0.7); /* Overlay com a nova cor */
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: #1C102E; /* Fundo do modal */
     margin: 15% auto;
     padding: 40px;
     border-radius: 10px;
     max-width: 500px;
     position: relative;
     animation: slideDown 0.4s ease-out;
+    border: 1px solid #3c2f5a;
 }
 
 @keyframes slideDown {
@@ -341,9 +346,13 @@ footer {
 }
 
 .close-button:hover, .close-button:focus {
-    color: black;
+    color: #F1C12E; /* Destaque no hover */
     text-decoration: none;
     cursor: pointer;
+}
+
+#modal-title {
+    color: #F1C12E; /* Destaque no título do modal */
 }
 
 #modal-details {
