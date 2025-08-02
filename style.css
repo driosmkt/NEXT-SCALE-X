@@ -1,7 +1,3 @@
-### **`style.css` (Atualizado)**
-Foram adicionadas as novas classes para a lista de sequência e removidas as classes antigas que não são mais utilizadas.
-
-```css
 /* RESET E CONFIGURAÇÕES GLOBAIS */
 * {
     margin: 0;
@@ -254,7 +250,7 @@ body {
     to { /* a largura é definida inline no HTML */ }
 }
 
-/* NOVA SEÇÃO DE SEQUÊNCIA DE ABORDAGEM */
+/* SEÇÃO DE SEQUÊNCIA DE ABORDAGEM */
 .sequence-bg {
     background-color: #100322;
 }
