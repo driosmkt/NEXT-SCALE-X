@@ -34,7 +34,7 @@ body {
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 700;
-    color: #FFFFFF; /* Garante que o título principal seja branco */
+    color: #FFFFFF;
 }
 
 #hero .subtitle {
@@ -67,7 +67,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #ffda57; /* Variação do destaque */
+    background-color: #ffda57;
     transform: translateY(-3px);
 }
 
@@ -101,29 +101,30 @@ body {
 
 .profile-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(241, 193, 46, 0.15); /* Sombra com cor de destaque */
+    box-shadow: 0 8px 25px rgba(241, 193, 46, 0.15);
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #3c2f5a; /* Linha divisória mais escura */
+    border-bottom: 1px solid #3c2f5a;
     padding-bottom: 15px;
     margin-bottom: 15px;
 }
 
 .card-header h3 {
-    color: #FFFFFF; /* Títulos dos cards */
+    color: #FFFFFF;
     font-size: 1.4rem;
 }
 
 .score {
-    background-color: #F1C12E; /* Cor de destaque */
-    color: #0A0018; /* Cor de fundo para contraste */
+    background-color: #F1C12E;
+    color: #0A0018;
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: 700;
+    flex-shrink: 0;
 }
 
 .profile-card.tier-2 .score {
@@ -133,7 +134,7 @@ body {
 
 .ideal-profile {
     font-weight: 600;
-    color: #F1C12E; /* Cor de destaque */
+    color: #F1C12E;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -153,8 +154,8 @@ body {
     display: inline-block;
     margin-top: auto;
     padding: 10px 20px;
-    background-color: #F1C12E; /* Cor de destaque */
-    color: #0A0018; /* Cor de fundo para contraste */
+    background-color: #F1C12E;
+    color: #0A0018;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
@@ -170,40 +171,27 @@ body {
     background-color: #100322; /* Fundo sutilmente diferente para Tier 2 */
 }
 
-/* TIERS 3 e 4 (Compact Grid) */
-.compact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* NOVOS ESTILOS PARA CARDS TIER 3 E 4 */
+.profile-card.tier-3, .profile-card.tier-4 {
+    padding-left: 25px; /* Ajusta o padding para a borda */
 }
 
-.compact-card {
-    background: #1C102E;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-left: 5px solid #F1C12E; /* Cor de destaque */
+.profile-card.tier-3 {
+    border-left: 5px solid #F1C12E; /* Borda dourada */
 }
 
-.compact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(241, 193, 46, 0.1);
+.profile-card.tier-4 {
+    border-left: 5px solid #6c757d; /* Borda cinza */
 }
 
-.compact-card.tier-4 {
-    border-left-color: #6c757d; /* Cinza */
-}
-
-.compact-card h4 {
-    margin-bottom: 10px;
-    color: #FFFFFF;
+.profile-card.tier-4 .score {
+    background-color: #8a929a;
+    color: #0A0018;
 }
 
 /* RECOMENDAÇÕES E ROI */
 .recommendations-bg {
-    background-color: #100322; /* Fundo sutilmente diferente */
+    background-color: #100322;
     color: #CFCBBF;
 }
 
@@ -258,7 +246,7 @@ body {
 }
 
 .roi-bar .roi-value {
-    color: #F1C12E; /* Cor de destaque */
+    color: #F1C12E;
     font-weight: 700;
 }
 
@@ -281,14 +269,14 @@ body {
 }
 
 .sequence-list li, .excluded-list li {
-    background: #1C102E; /* Fundo dos cards */
+    background: #1C102E;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
 .excluded-list a {
-    color: #F1C12E; /* Cor de destaque */
+    color: #F1C12E;
     text-decoration: none;
     font-weight: 600;
 }
@@ -299,64 +287,11 @@ body {
 
 /* RODAPÉ */
 footer {
-    background-color: #100322; /* Cor de fundo escura e alinhada */
+    background-color: #100322;
     color: #CFCBBF;
     text-align: center;
     padding: 20px 0;
     margin-top: 50px;
-}
-
-/* MODAL */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(10, 0, 24, 0.7); /* Overlay com a nova cor */
-}
-
-.modal-content {
-    background-color: #1C102E; /* Fundo do modal */
-    margin: 15% auto;
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 500px;
-    position: relative;
-    animation: slideDown 0.4s ease-out;
-    border: 1px solid #3c2f5a;
-}
-
-@keyframes slideDown {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
-
-.close-button:hover, .close-button:focus {
-    color: #F1C12E; /* Destaque no hover */
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#modal-title {
-    color: #F1C12E; /* Destaque no título do modal */
-}
-
-#modal-details {
-    margin: 20px 0;
 }
 
 /* RESPONSIVIDADE */
@@ -368,6 +303,5 @@ footer {
 @media (max-width: 480px) {
     #hero h1 { font-size: 2rem; }
     .investment-info { display: flex; flex-direction: column; gap: 10px; }
-    .profile-grid, .compact-grid { grid-template-columns: 1fr; }
-    .modal-content { width: 90%; margin: 25% auto;}
+    .profile-grid { grid-template-columns: 1fr; }
 }
