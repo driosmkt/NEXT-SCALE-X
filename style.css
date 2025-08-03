@@ -44,45 +44,6 @@ body {
     color: #CFCBBF;
 }
 
-/* SEÇÃO QUICK WINS */
-#quick-wins {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: rgba(241, 193, 46, 0.05);
-    border-bottom: 1px solid rgba(241, 193, 46, 0.2);
-}
-
-.quick-wins-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.quick-win-card {
-    background-color: #1C102E;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #3c2f5a;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.quick-win-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(241, 193, 46, 0.15);
-}
-
-.quick-win-card h4 {
-    color: #F1C12E;
-    margin-bottom: 5px;
-}
-
-.quick-win-card p {
-    font-size: 0.9rem;
-    color: #CFCBBF;
-}
-
-
 /* SEÇÕES DE TIER */
 .tier-section {
     padding: 80px 0;
@@ -168,7 +129,7 @@ body {
 .profile-card.tier-3 .score { background-color: #8A2BE2; color: #FFFFFF; }
 
 
-/* ESTILOS TIER 4 (DESCARTADOS) - ATUALIZADO */
+/* ESTILOS TIER 4 (DESCARTADOS) */
 .tier-descartados-bg { background-color: #100322; }
 
 .tier-descartados-bg h2 {
