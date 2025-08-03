@@ -168,10 +168,43 @@ body {
 .profile-card.tier-3 .score { background-color: #8A2BE2; color: #FFFFFF; }
 
 
-/* ESTILOS TIER 4 (DESPRIORIZADOS) */
-.tier-despriorizados-bg { background-color: #100322; }
-.profile-card.tier-4 { border-left-color: #6c757d; }
-.profile-card.tier-4 .score { background-color: #8a929a; color: #0A0018; }
+/* ESTILOS TIER 4 (DESCARTADOS) - ATUALIZADO */
+.tier-descartados-bg { background-color: #100322; }
+
+.tier-descartados-bg h2 {
+    color: #8a929a;
+}
+
+.profile-card.tier-4 {
+    background-color: #140d1f; /* Roxo bem escuro/acinzentado */
+    border-left-color: #4a4a4a; /* Cinza escuro */
+    box-shadow: none;
+}
+
+.profile-card.tier-4:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.profile-card.tier-4 .card-header h3 {
+    color: #a39fae;
+}
+
+.profile-card.tier-4 .score { 
+    background-color: #6c757d; 
+    color: #140d1f;
+}
+
+.profile-card.tier-4 ul li {
+    color: #8a929a;
+}
+
+.profile-card.tier-4 .profile-link {
+    background-color: #3c2f5a;
+    color: #8a929a;
+    font-weight: 500;
+    pointer-events: none; /* Desativa cliques */
+}
 
 /* INSIGHT ESTRATÉGICO */
 .insight {
